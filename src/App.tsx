@@ -15,7 +15,7 @@ function App(): JSX.Element {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch("../assets/data.json");
+      const data = await fetch("/assets/data.json");
       const json = await data.json();
       if (json.textData.length === 0) alert("Tablica danych jest pusta");
       dispatch(loadData(json.textData));
